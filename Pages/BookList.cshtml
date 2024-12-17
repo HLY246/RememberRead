@@ -1,0 +1,48 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@model RememberRead.Pages.BookListModel
+@{
+}
+
+<div>
+	<h1>Book List</h1>
+
+	@if (SignInManager.IsSignedIn(User))
+	{
+		<div>
+			<a>Create New Task</a>
+		</div>
+
+		<table>
+			<tr>
+				<th>Book Title</th>
+				<th>Book Author</th>
+				<th>Additional Notes</th>
+				<th>Edit Options</th>
+			</tr>
+
+			@foreach (var Book in Model.BookList)
+			{
+				<tr>
+					<td>@Book.BookTitle</td>
+					<td>@Book.BookAuthor</td>
+					<td>@Book.AdditionalNotes</td>
+					<td>
+						<form>
+							<button type="submit">Delete</button>
+							<a>Edit</a>
+						</form>
+					</td>
+				</tr>
+			}
+		</table>
+	}
+	else
+	{
+		<h3>You Need to sign in to use this function</h3>
+	}
+</div>

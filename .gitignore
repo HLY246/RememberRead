@@ -1,0 +1,14 @@
+# Exclude sensitive files
+*.env
+appsettings*.json
+
+# Exclude build artifacts
+bin/
+obj/
+
+# Exclude IDE-specific files
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

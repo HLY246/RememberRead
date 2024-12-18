@@ -1,0 +1,24 @@
+﻿@page
+@model RememberRead.Pages.AddNewBookModel
+@{
+}
+
+
+<div>
+	<h1>Add New Book</h1>
+
+	<p>anything marked with a "*" is required</p>
+	<form method="post">
+		<label for="AddBookTitle">*Book Title</label>
+		<input type="text" name="AddBookTitle" required />
+
+		<label for="AddBookAuthor">*Book Author</label>
+		<input type="text" name="AddBookAuthor" required/>
+
+		<label for="AddAdditionalNotes">Additional Notes</label>
+		<input type="text" name="AddAdditionalNotes" />
+
+		<button type="submit">Add</button>
+		<a asp-page="/BookList">Cancel</a>
+	</form>
+</div>

@@ -1,0 +1,25 @@
+﻿@page
+@model RememberRead.Pages.EditBookModel
+@{
+}
+
+<div>
+	<h1>Edit Book</h1>
+
+	<p>anything marked with a "*" is required</p>
+	<form method="post">
+		<input type="hidden" value="@Model.BookToEdit.Id" />
+
+		<label for="EditBookTitle">*Book Title</label>
+		<input type="text" name="EditBookTitle" value="@Model.BookToEdit.BookTitle" required />
+
+		<label for="EditBookAuthor">*Book Author</label>
+		<input type="text" name="EditBookAuthor" value="@Model.BookToEdit.BookAuthor" required />
+
+		<label for="EditAdditionalNotes">Additional Notes</label>
+		<input type="text" name="EditAdditionalNotes" value="@Model.BookToEdit.AdditionalNotes" />
+
+		<button type="submit">Edit</button>
+		<a asp-page="/BookList">Cancel</a>
+	</form>
+</div>

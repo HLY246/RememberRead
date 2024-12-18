@@ -42,5 +42,27 @@ namespace RememberRead.Pages
                 RedirectToPage("/Error");
             }
         }
+
+        public async Task<IActionResult> OnPostAsync(int id)
+        {
+            if (_context.Books != null)
+            {
+                var BookToDelete = await _context.Books.FindAsync(id);
+
+                if (BookToDelete == null)
+                {
+                    return NotFound();
+                }
+
+                _context.Books.Remove(BookToDelete);
+                await _context.SaveChangesAsync();
+
+                return RedirectToPage();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }

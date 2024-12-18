@@ -14,7 +14,7 @@
 	@if (SignInManager.IsSignedIn(User))
 	{
 		<div>
-			<a>Create New Task</a>
+			<a asp-page="/AddNewBook">Add New Book</a>
 		</div>
 
 		<table>
@@ -22,6 +22,7 @@
 				<th>Book Title</th>
 				<th>Book Author</th>
 				<th>Additional Notes</th>
+				<th>Amazon Link</th>
 				<th>Edit Options</th>
 			</tr>
 
@@ -31,10 +32,12 @@
 					<td>@Book.BookTitle</td>
 					<td>@Book.BookAuthor</td>
 					<td>@Book.AdditionalNotes</td>
+					<td><a href="https://www.amazon.co.uk/s?k=@Book.BookTitle" target="_blank">@Book.BookTitle on Amazon</a></td>
 					<td>
-						<form>
+						<form method="post">
+							<input type="hidden" name="id" value="@Book.Id" />
 							<button type="submit">Delete</button>
-							<a>Edit</a>
+							<a asp-page="/EditBook" asp-route-id="@Book.Id">Edit</a>
 						</form>
 					</td>
 				</tr>

@@ -1,6 +1,7 @@
 # Exclude sensitive files
 *.env
 appsettings*.json
+ToDo.txt
 
 # Exclude build artifacts
 bin/

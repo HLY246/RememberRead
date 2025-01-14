@@ -18,26 +18,8 @@ namespace RememberRead.Pages
             _context = context;
         }
 
-        public async Task OnGetAsync()
+        public void OnGet()
         {
-            var user = await _userManager.FindByEmailAsync("petroy.holyland@gmail.com");
-
-            if (user == null)
-            {
-                Console.WriteLine("User was Null");
-                return;
-            }
-
-            var bookExample = new Book
-            {
-                BookTitle = "Example",
-                BookAuthor = "Example Author",
-                AdditionalNotes = "This is a test to see if the tables are setup correctly",
-                UserId = user.Id
-            };
-
-            _context.Books.Add(bookExample);
-            await _context.SaveChangesAsync();
         }
     }
 }

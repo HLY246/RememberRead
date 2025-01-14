@@ -8,16 +8,15 @@
 @{
 }
 
-<div>
+<div class="bookListContainer">
 	<h1>Book List</h1>
 
 	@if (SignInManager.IsSignedIn(User))
 	{
-		<div>
-			<a asp-page="/AddNewBook">Add New Book</a>
-		</div>
-
-		<table>
+		<table class="bookListTable">
+			
+			<a class="button" asp-page="/AddNewBook">Add New Book</a>
+			
 			<tr>
 				<th>Book Title</th>
 				<th>Book Author</th>
@@ -28,16 +27,16 @@
 
 			@foreach (var Book in Model.BookList)
 			{
-				<tr>
+				<tr class="tableRow">
 					<td>@Book.BookTitle</td>
 					<td>@Book.BookAuthor</td>
 					<td>@Book.AdditionalNotes</td>
 					<td><a href="https://www.amazon.co.uk/s?k=@Book.BookTitle" target="_blank">@Book.BookTitle on Amazon</a></td>
 					<td>
-						<form method="post">
+						<form class="buttonForm" method="post">
 							<input type="hidden" name="id" value="@Book.Id" />
-							<button type="submit">Delete</button>
-							<a asp-page="/EditBook" asp-route-id="@Book.Id">Edit</a>
+							<button class="formButton" type="submit"><i class="fa fa-trash"></i> Delete</button>
+							<a class="formButton" asp-page="/EditBook" asp-route-id="@Book.Id"><i class="fa fa-edit"></i> Edit</a>
 						</form>
 					</td>
 				</tr>

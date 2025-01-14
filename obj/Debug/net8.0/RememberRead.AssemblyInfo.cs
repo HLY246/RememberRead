@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RememberRead")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d0a31c00e3b5e22e90d67150cec83699f7eb95d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+434077b25fe71cd11407bd736b0070991e16d491")]
 [assembly: System.Reflection.AssemblyProductAttribute("RememberRead")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RememberRead")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

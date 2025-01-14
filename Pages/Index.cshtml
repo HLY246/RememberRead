@@ -5,6 +5,25 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Welcome</h1>
+    <p>
+       Have you ever finished reading a series of books just to find yourself without your next page turner?<br/> 
+       Have you ever had somebody recomend a book that has peaked your interest just for you to forget what it was called two days later when you go to buy it?<br />
+       RemeberRead was built to help all book worms organise their interests by providing a place for them to save their next read. Whenever you finish your book or series simply check your list to remind yourself of whats next!
+    </p>
+
+    <div class="imgWrapper">
+        <div class="imgDiv">
+            <img class="homepagebg" src="~/Images/homepagebg.jpg" />
+            <a asp-area="Identity" asp-page="/Account/Register">
+            <div class="imgContent">
+                <h1>Start Remembering...</h1>
+            </div>
+            </a>
+        </div>
+    </div>
+    
+
+    <!--<a class="button" asp-area="Identity" asp-page="/Account/Register">Start Remembering</a>-->
+    
 </div>

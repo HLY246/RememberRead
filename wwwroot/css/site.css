@@ -13,10 +13,253 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    background-color: #FCF7ED;
+    color: #929D8D;
 }
 
 body {
-  margin-bottom: 60px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 60px;
+    background-color: #FCF7ED;
+    color: #929D8D;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*Nav Bar Styles*/
+.navbar-brand {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #929D8D;
+}
+
+.navbar-brand:hover {
+    color: #929D8D;
+}
+
+.navItems {
+    text-align: center;
+}
+
+/*Header Styles*/
+header {
+    background-color: #FCF7ED;
+}
+
+nav {
+    background-color: #FCF7ED;
+}
+
+/*Book List Styles*/
+
+.bookListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.bookListTable {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bookListTable th, td {
+    border: 1px solid #ddd;
+    padding: 12px 16px;
+    text-align: left;
+    color: #333;
+}
+
+.bookListTable th {
+    border: 1px solid #929D8D;
+    padding: 10px;
+    text-align: left;
+    background-color: #f7f4ed;
+    color: #929D8D;
+    font-size: 1rem;
+}
+
+.bookListTable tr:nth-child(even) {
+    background-color: #fdfaf5;
+}
+
+.bookListTable tr:hover {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #e67e22;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d35400;
+    text-decoration: underline;
+
+}
+
+
+/*button styles*/
+.button {
+    background-color: #e0d9c8;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.formButton {
+    background-color: #e0d9c8;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+.button:hover, .formButton:hover {
+    background-color: #d4c9b2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    color: #333;
+    text-decoration: none;
+
+}
+
+/*Add/Edit Page Styles*/
+
+.addForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #929D8D;
+    border-radius: 8px;
+    background-color: #FCF7ED;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.addLabel {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #929D8D;
+}
+
+.addInput[type="text"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #929D8D;
+    border-radius: 16px;
+}
+
+.buttonForm {
+    width: 180px;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .buttonForm {
+        width: 100px;
+    }
+}
+
+/*account pages styles*/
+
+.nav-pills .nav-link.active {
+    background: #929D8D;
+    color: #fff;
+    transition: 0.3s;
+}
+
+    .nav-pills .nav-link.active:hover {
+        background-color: #808a7c;
+    }
+
+.nav-pills .nav-link {
+    color: #333;
+}
+
+.w-100 {
+    background-color: #929D8D;
+    color: #fff;
+    transition: 0.3s;
+    border: none;
+}
+
+.w-100:hover {
+    background-color: #808a7c;
+}
+
+/*Homepage styles*/
+
+.imgWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.imgDiv {
+    position: relative;
+    width: 80%;
+}
+
+.homepagebg {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.imgContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.imgContent:hover {
+    opacity: 1;
+}
+
+.imgContent > *{
+    transform: translateY(200px);
+    transition: transform 0.6s;
+    color: #ddd;
+}
+
+.imgContent:hover > *{
+    transform: translateY(0px);
 }

@@ -7,19 +7,19 @@
 	<h1>Edit Book</h1>
 
 	<p>anything marked with a "*" is required</p>
-	<form method="post">
+	<form method="post" class="addForm">
 		<input type="hidden" value="@Model.BookToEdit.Id" />
 
-		<label for="EditBookTitle">*Book Title</label>
-		<input type="text" name="EditBookTitle" value="@Model.BookToEdit.BookTitle" required />
+		<label class="addLabel" for="EditBookTitle">*Book Title</label>
+		<input class="addInput" type="text" name="EditBookTitle" value="@Model.BookToEdit.BookTitle" required />
 
-		<label for="EditBookAuthor">*Book Author</label>
-		<input type="text" name="EditBookAuthor" value="@Model.BookToEdit.BookAuthor" required />
+		<label class="addLabel" for="EditBookAuthor">*Book Author</label>
+		<input class="addInput" type="text" name="EditBookAuthor" value="@Model.BookToEdit.BookAuthor" required />
 
-		<label for="EditAdditionalNotes">Additional Notes</label>
-		<input type="text" name="EditAdditionalNotes" value="@Model.BookToEdit.AdditionalNotes" />
+		<label class="addLabel" for="EditAdditionalNotes">Additional Notes</label>
+		<input class="addInput" type="text" name="EditAdditionalNotes" value="@Model.BookToEdit.AdditionalNotes" />
 
-		<button type="submit">Edit</button>
-		<a asp-page="/BookList">Cancel</a>
+		<button class="button" type="submit">Edit</button>
+		<a class="button" asp-page="/BookList">Cancel</a>
 	</form>
 </div>

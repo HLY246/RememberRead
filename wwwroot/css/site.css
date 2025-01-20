@@ -47,8 +47,8 @@ h1 {
     color: #929D8D;
 }
 
-.navItems {
-    text-align: center;
+.navbar-toggler {
+    color: #929D8D;
 }
 
 /*Header Styles*/
@@ -110,7 +110,14 @@ a {
 a:hover {
     color: #d35400;
     text-decoration: underline;
+}
 
+@media (max-width: 768px) {
+
+    .bookListTable {
+        display: block;
+        overflow-x: auto;
+    }
 }
 
 
@@ -262,4 +269,15 @@ a:hover {
 
 .imgContent:hover > *{
     transform: translateY(0px);
+}
+
+.homepageButton {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .homepageButton {
+        display: block;
+        width: 100%;
+    }
 }

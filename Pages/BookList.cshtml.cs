@@ -64,5 +64,41 @@ namespace RememberRead.Pages
                 return NotFound();
             }
         }
+
+        public PageResult OnPostSearch(string searchBy, string searchString)
+        {
+            if(User.Identity != null)
+            {
+                if(User.Identity.IsAuthenticated)
+                {
+                    var userId = _userManager.GetUserId(User);
+
+                    if (searchBy == "title")
+                    {
+                        if (_context.Books != null)
+                        {
+                            BookList = _context.Books
+                                .Where(book => book.UserId == userId && book.BookTitle.Contains(searchString))
+                                .ToList();
+                        }
+                    }
+                    else if (searchBy == "author")
+                    {
+                        if (_context.Books != null)
+                        {
+                            BookList = _context.Books
+                                .Where(book => book.UserId == userId && book.BookAuthor.Contains(searchString))
+                                .ToList();
+                        }
+                    }     
+                }
+            }
+            else
+            {
+                RedirectToPage("/Error");
+            }
+
+            return Page();
+        }
     }
 }

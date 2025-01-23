@@ -113,7 +113,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-
     .bookListTable {
         display: block;
         overflow-x: auto;
@@ -133,6 +132,8 @@ a:hover {
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
+    border: none;
+    text-align: center;
 }
 
 .formButton {
@@ -155,8 +156,13 @@ a:hover {
 
 }
 
-/*Add/Edit Page Styles*/
+@media (max-width: 768px) {
+    .formButton {
+        margin-bottom: 10px;
+    }
+}
 
+/*Add/Edit Page Styles*/
 .addForm {
     display: flex;
     flex-direction: column;
@@ -194,8 +200,50 @@ a:hover {
     }
 }
 
-/*account pages styles*/
+/*Search Bar Styles*/
 
+.searchForm {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #929D8D;
+    border-radius: 8px;
+    background-color: #FCF7ED;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+@media (max-width: 620px) {
+    .searchForm {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #929D8D;
+        border-radius: 8px;
+        background-color: #FCF7ED;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 15px;
+    }
+}
+
+.searchBy {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #929D8D;
+    border-radius: 16px;
+}
+
+summary {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*account pages styles*/
 .nav-pills .nav-link.active {
     background: #929D8D;
     color: #fff;

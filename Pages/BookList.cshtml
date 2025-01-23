@@ -13,23 +13,30 @@
 
 	@if (SignInManager.IsSignedIn(User))
 	{
-		<table class="bookListTable">
-			
-			<a class="button" asp-page="/AddNewBook">Add New Book</a>
-			
-			<!--Search Bar -->
-			<form method="post" asp-page-handler="Search">
+
+		<a class="button" asp-page="/AddNewBook">Add New Book</a>
+
+		<!--Search Bar -->
+		<details>
+			<summary>Search</summary>
+			<form class="searchForm" method="post" asp-page-handler="Search" >
+				
 				<label for="searchBy">Search By</label>
-				<select name="searchBy">
+				<select name="searchBy" class="searchBy">
 					<option value="title">Title</option>
 					<option value="author">Author</option>
 				</select>
+				<br class="searchFormBr" />
 				<label for="search">Search for</label>
-				<input name="searchString" type="text" />
+				<input name="searchString" type="text" class="addInput" />
+				<br class="searchFormBr" />
 				<button class="button" type="submit">Search</button>
 				<a class="button" asp-page="/BookList"><i class="fa-solid fa-xmark"></i></a>
-			</form>
+				
+			</form>	
+		</details>
 
+		<table class="bookListTable">
 			<tr>
 				<th>Book Title</th>
 				<th>Book Author</th>
